@@ -243,7 +243,8 @@ __Time to build your app__
 2. Next, hit Run --> FirstActivity on the toolbar (you can also hit the play button on the top nav)
 3. Play with your next app! And grab us to help you troubleshoot.
 
-__Homework__
+Homework
+---
 
 For homework, we are going to ask you guys to create a simple to do list. You can find the example demo here (insert link).
 
