@@ -18,12 +18,13 @@ You may have notied that the HelloWorld app had a ton of folders (directories). 
 
 * AndroidManifest.xml: The manifest file describes the fundamental characteristics of the app and defines each of its components. You'll learn about various declarations in this file as you read more training classes.
 	* One of the most important elements your manifest should include is the <uses-sdk> element. This declares your app's compatibility with different Android versions using the android:minSdkVersion and android:targetSdkVersion attributes. For your first app, it should look like this:
-```
+```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" ... >
     <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="17" />
     ...
 </manifest>
 ```
+
 * main/ 
 	* java/: Directory for your app's main source files. By default, it includes an Activity class that runs when your app is launched using the app icon.
 	* res/: Contains several sub-directories for app resources. Here are just a few:
@@ -39,7 +40,7 @@ To start, fork and clone our Lab_0.5 app and open it up in Android Studio.
 
 Open up main --> java --> MainActivity.java. This is the file which acts as your controller. It should look like this:
 
-```
+```java
 package com.evansimpson.mobpro.lab0;
 
 // imports
@@ -72,7 +73,7 @@ Pay close attention to the onCreate method, which sets the view to activity_main
 
 Open up main --> res --> layout --> activity_main.xml. It should look like this:
 
-```
+```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -109,7 +110,7 @@ __Making the Views__
 2. For the sake of time, we are going to give you the two layout files for this lab. (In the homework, you will work on putting new UI elements into the layout.) Paste the code below into the new layout files that you made. 
 
 activity_first.xml
-```
+```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -137,7 +138,7 @@ activity_first.xml
 ```
 
 activity_second.xml
-```
+```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -170,7 +171,7 @@ __Adding Strings__
 2. Open up main --> values --> strings.xml 
 3. We need to define a few string values (aka the ones that are highlighted in red on the layouts). Paste the three values below into the strings.xml file.
 
-```
+```xml
 <string name="activity1">Click the button to go to activity 2</string>
 <string name="activity2">Click the button to go back to activity 1</string>
 <string name="button">Navigate</string>
@@ -185,7 +186,7 @@ As you can see, these three values are the text shown in activity1, activity2, a
  2. Now, if you've ever seen Java before, you know that buttons have listeners. Listeners are essentially a way to process events. Aka, to setup a button to do something, you attach a listener to the button, called an setOnClickListener(), which tells the app that something should happen when the button is clicked. Inside the Listener, you define an onClick() method, which deifnes what happens when the button is clicked. In our case, we want to click the button to switch to SecondActivity.
  3. in FirstActivity.java, inside the onCreate() method, under `setContentView(R.layout.activity_first);` add:
 
- ```
+ ```java
  Button b = (Button) findViewById(R.id.button1); // creates a button b and attaching it to the UI element called button1 on the view
         b.setOnClickListener(new View.OnClickListener() { // creates and sets an onClickListener for the button b
             @Override
@@ -205,7 +206,7 @@ __Appending Activities to the Android Manifest__
 2. Change `android:name="com.evansimpson.mobpro.lab0.MainActivity"` to `android:name="com.evansimpson.mobpro.lab0.FirstActivity"` so that FirstActivity.java appears when you launch the app
 3. Add in SecondActivity.java by appending a new <activity> tag inside the <application> tag. Your manifest should look like this:
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.evansimpson.mobpro.lab0"
@@ -262,7 +263,7 @@ Some useful hints. First of all, you know most of this stuff, since we just cove
 * Check out the [layouts tutorial, especially the list views portion](http://developer.android.com/guide/topics/ui/layout/listview.html) since a to-do list can be done with a listview
 * The text field can be added via xml using a textfield item. You can google for the syntax. Here is a place to get you started.
 
-```
+```xml
 <EditText android:id="@+id/edit_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
