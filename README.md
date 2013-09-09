@@ -33,9 +33,11 @@ You may have notied that the HelloWorld app had a ton of folders (directories). 
 
 Adding a second activity
 ---
-Now we would like to go over how to add a second activity to your HelloWorld app. To start, fork and clone our Lab_0.5 app and open it up in Android Studio.
+Now we would like to go over how to add a second activity to your HelloWorld app. To see what we are going to build, [check out the demo here](https://vimeo.com/74014200).
 
-Open up main --> java --> MainActivity.java. This is the file which acts as your controller. It sohuld look like this:
+To start, fork and clone our Lab_0.5 app and open it up in Android Studio.
+
+Open up main --> java --> MainActivity.java. This is the file which acts as your controller. It should look like this:
 
 ```
 package com.evansimpson.mobpro.lab0;
@@ -246,7 +248,7 @@ __Time to build your app__
 Homework
 ---
 
-For homework, we are going to ask you guys to create a simple to do list. You can find the example demo here (insert link).
+For homework, we are going to ask you guys to create a simple to do list. You can find [the example demo here](https://vimeo.com/74014220).
 
 To break this down into more detail, the specs are:
 * 1 Activity / View
